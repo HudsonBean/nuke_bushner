@@ -3,18 +3,22 @@ import "../Styles/Components/MenuBar.css";
 // Imports
 import React from "react";
 import Button from "./Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 
 function MenuBar() {
   return (
     <div className="menu-bar">
-      <Button className="menu-bar__item">
-        <FontAwesomeIcon icon={faBars} />
-      </Button>
-      <ul className={classNames("menu-bar__item", "menu-bar__list")}></ul>
-      <Button className="menu-bar__item">Shop</Button>
+      <div className="menu-bar--wrapper">
+        <Button className="menu-bar__item">Events</Button>
+        <Button className="menu-bar__item">Contact</Button>
+        <Button
+          className={classNames("menu-bar__item", "menu-bar__item--name")}
+        >
+          Nuke Bushner
+        </Button>
+        <Button className="menu-bar__item">Watch</Button>
+        <Button className="menu-bar__item">Shop</Button>
+      </div>
     </div>
   );
 }

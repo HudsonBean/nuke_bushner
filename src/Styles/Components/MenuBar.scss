@@ -1,18 +1,27 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
 .menu-bar {
   width: 100%;
-  height: 5rem;
-  background-color: red;
+  height: 7.5rem;
   display: flex;
-  flex-direction: row;
-
-  .menu-bar__item {
+  justify-content: center;
+  align-items: center;
+  .menu-bar--wrapper {
+    width: 65%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex: 0.5;
-  }
-  .menu-bar__list {
-    background-color: blue;
-    flex: 1;
+    .menu-bar__item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Rye";
+    }
+    .menu-bar__item--name {
+      font-size: 25px;
+    }
   }
 }
