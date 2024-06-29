@@ -1,1 +1,12 @@
-/*# sourceMappingURL=Home.css.map */
+.home-page {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  background-image: url(../images/Image1.png);
+  background-size: cover;
+  background-color: rgba(30, 30, 30, 0.55);
+  background-blend-mode: multiply;
+}
+.home-page .slant {
+  fill: white;
+}/*# sourceMappingURL=Home.css.map */

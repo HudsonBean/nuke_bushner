@@ -1,5 +1,6 @@
-// Imports
+// Fonts
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
 
 .menu-bar {
   width: 100%;
@@ -7,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
   .menu-bar--wrapper {
     width: 65%;
     display: flex;
@@ -18,10 +20,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: "Rye";
+      font-size: 20px;
+      &:hover {
+      }
     }
     .menu-bar__item--name {
+      font-family: "Rye";
       font-size: 25px;
+      font-weight: 750;
     }
   }
 }
