@@ -17,28 +17,21 @@ function MenuBar() {
     <div className="menu-bar">
       <div className="menu-bar--wrapper">
         <Button className="menu-bar__item">
-          Events{" "}
-          <FontAwesomeIcon className="menu-bar__item--icon" icon={faCalendar} />
+          <span>Events</span>
         </Button>
         <Button className="menu-bar__item">
-          Contact
-          <FontAwesomeIcon className="menu-bar__item--icon" icon={faEnvelope} />
+          <span>Contact</span>
         </Button>
         <Button
           className={classNames("menu-bar__item", "menu-bar__item--name")}
         >
-          Nuke Bushner
+          <span>Nuke Bushner</span>
         </Button>
         <Button className="menu-bar__item">
-          Watch
-          <FontAwesomeIcon className="menu-bar__item--icon" icon={faEye} />
+          <span>Watch</span>
         </Button>
         <Button className="menu-bar__item">
-          Shop
-          <FontAwesomeIcon
-            className="menu-bar__item--icon"
-            icon={faHatCowboy}
-          />
+          <span>Shop</span>
         </Button>
       </div>
     </div>
