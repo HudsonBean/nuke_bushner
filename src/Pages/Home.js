@@ -5,9 +5,14 @@ import Slant from "../Components/Slant";
 
 function Home() {
   return (
-    <div className="home-page">
-      <MenuBar />
-      <Slant className="slant" />
+    <div>
+      <div className="home-page">
+        <MenuBar />
+        <Slant className="slant" />
+      </div>
+      <div
+        style={{ width: "100%", height: "50rem", backgroundColor: "white" }}
+      ></div>
     </div>
   );
 }
