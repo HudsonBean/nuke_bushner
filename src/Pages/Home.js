@@ -12,7 +12,12 @@ function Home() {
         <MenuBar />
         <div className="home-page__content">
           {/* Video */}
-          <video className="home-page__video" controls>
+          <video
+            autoPlay
+            className="home-page__video"
+            controls
+            controlsList="play nodownload nofullscreen noremoteplayback"
+          >
             <source src={video} type="video/mp4" />
           </video>
           {/* CTA */}
