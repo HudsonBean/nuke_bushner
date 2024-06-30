@@ -2,8 +2,10 @@ import React from "react";
 import "../Styles/Home.css";
 import MenuBar from "../Components/MenuBar";
 import Slant from "../Components/Slant";
-import video from "../Videos/AmericanIdol.mp4";
+import video from "../Videos/WriteThatSong.mp4";
 import Button from "../Components/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -21,7 +23,17 @@ function Home() {
             <source src={video} type="video/mp4" />
           </video>
           {/* CTA */}
-          <Button></Button>
+          <Button
+            className="home-page__cta"
+            onClick={() => console.log("Hello!")}
+            onHover={() => {}}
+          >
+            <span>Book Now</span>
+            <FontAwesomeIcon
+              className="home-page__cta--arrow"
+              icon={faArrowDown}
+            />
+          </Button>
         </div>
         <Slant className="slant" />
       </div>
