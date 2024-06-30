@@ -9,7 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #eed8a4;
   text-shadow: 2.5px 1px 2.5px black;
 }
 .menu-bar .menu-bar--wrapper {
@@ -20,6 +19,7 @@
   align-items: center;
 }
 .menu-bar .menu-bar--wrapper .menu-bar__item {
+  color: #eed8a4;
   flex: 0.3;
   display: flex;
   justify-content: center;

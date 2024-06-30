@@ -1,15 +1,16 @@
 import React from "react";
 
-function Button({ children, className, onClick, onHover }) {
+function Button({ children, className, href, onClick, onHover }) {
   return (
-    <div
+    <a
+      href={href}
       onHover={onHover}
       onClick={onClick}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "pointer", textDecoration: "none" }}
       className={className}
     >
       {children}
-    </div>
+    </a>
   );
 }
 

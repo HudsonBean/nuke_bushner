@@ -18,6 +18,7 @@ function Home() {
             autoPlay
             className="home-page__video"
             controls
+            muted
             controlsList="play nodownload nofullscreen noremoteplayback"
           >
             <source src={video} type="video/mp4" />
@@ -37,9 +38,8 @@ function Home() {
         </div>
         <Slant className="slant" />
       </div>
-      <div
-        style={{ width: "100%", height: "50rem", backgroundColor: "white" }}
-      ></div>
+      {/* About Me */}
+      <div id="about-me"></div>
       {/* Placeholder */}
     </div>
   );

@@ -15,7 +15,7 @@ function MenuBar() {
         </Button>
 
         {/* About Me */}
-        <Button className="menu-bar__item">
+        <Button className="menu-bar__item" href="#about-me">
           <span>About Me</span>
         </Button>
 
