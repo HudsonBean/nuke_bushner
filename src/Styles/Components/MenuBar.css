@@ -17,20 +17,24 @@
   align-items: center;
 }
 .menu-bar .menu-bar--wrapper .menu-bar__item {
-  flex: 0.25;
+  flex: 0.3;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  position: relative;
   padding-bottom: 5px;
+  font-size: 25px;
   font-weight: 500;
 }
 .menu-bar .menu-bar--wrapper .menu-bar__item span {
   position: relative;
+  transition: all 0.1s ease-out;
 }
 .menu-bar .menu-bar--wrapper .menu-bar__item span:hover {
+  font-size: 26px;
   color: white;
   cursor: pointer;
+  transition: all 0.1s ease-in;
 }
 .menu-bar .menu-bar--wrapper .menu-bar__item--name {
   flex: 1;
@@ -41,4 +45,7 @@
   text-wrap: nowrap;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
+}
+.menu-bar .menu-bar--wrapper .menu-bar__item--name span:hover {
+  font-size: 51px;
 }/*# sourceMappingURL=MenuBar.css.map */

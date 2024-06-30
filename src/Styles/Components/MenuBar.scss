@@ -17,20 +17,25 @@
     justify-content: center;
     align-items: center;
     .menu-bar__item {
-      flex: 0.25;
+      flex: 0.3;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 25px;
+      position: relative;
       padding-bottom: 5px;
+      font-size: 25px;
       font-weight: 500;
 
+      // Text
       span {
         position: relative;
         &:hover {
+          font-size: 26px;
           color: white;
           cursor: pointer;
+          transition: all 0.1s ease-in;
         }
+        transition: all 0.1s ease-out;
       }
     }
     .menu-bar__item--name {
@@ -42,6 +47,11 @@
       text-wrap: nowrap;
       margin-right: 0.25rem;
       margin-left: 0.25rem;
+      span {
+        &:hover {
+          font-size: 51px;
+        }
+      }
     }
   }
 }

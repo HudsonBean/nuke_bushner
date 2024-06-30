@@ -4,7 +4,7 @@
   position: relative;
   background-image: url(../images/Image3.png);
   background-size: cover;
-  background-color: rgba(30, 30, 30, 0.35);
+  background-color: rgba(30, 30, 30, 0.45);
   background-blend-mode: multiply;
   background-position-y: -500px;
 }
