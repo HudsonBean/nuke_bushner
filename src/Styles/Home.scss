@@ -2,6 +2,10 @@
   font-family: Besta Baru;
   src: url(./Fonts/BestaBaru-8OaO0.ttf);
 }
+@font-face {
+  font-family: Fort Death;
+  src: url(./Fonts/FortDeath-3ne6.ttf);
+}
 
 .home-page {
   width: 100%;
@@ -27,7 +31,8 @@
     .home-page__cta {
       width: 15rem;
       height: 5rem;
-      font-size: 25px;
+      font-size: 50px;
+      font-family: Fort Death;
       display: flex;
       justify-content: center;
       align-items: center;
