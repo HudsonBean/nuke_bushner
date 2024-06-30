@@ -4,10 +4,16 @@
   position: relative;
   background-image: url(../images/Image3.png);
   background-size: cover;
-  background-color: rgba(30, 30, 30, 0.45);
+  background-color: rgba(30, 30, 30, 0.5);
   background-blend-mode: multiply;
   background-position-y: -500px;
+  background-repeat: no-repeat;
   .slant {
     fill: white;
   }
+}
+
+.grit {
+  mask-image: url(../images/grit.png);
+  mask-repeat: inherit;
 }
