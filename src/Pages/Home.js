@@ -2,19 +2,28 @@ import React from "react";
 import "../Styles/Home.css";
 import MenuBar from "../Components/MenuBar";
 import Slant from "../Components/Slant";
-import classNames from "classnames";
+import video from "../Videos/AmericanIdol.mp4";
+import Button from "../Components/Button";
 
 function Home() {
   return (
     <div>
       <div className="home-page">
         <MenuBar />
-        <Slant className={classNames("slant", "grit")} />
+        <div className="home-page__content">
+          {/* Video */}
+          <video className="home-page__video" controls>
+            <source src={video} type="video/mp4" />
+          </video>
+          {/* CTA */}
+          <Button></Button>
+        </div>
+        <Slant className="slant" />
       </div>
       <div
-        className="grit"
         style={{ width: "100%", height: "50rem", backgroundColor: "white" }}
       ></div>
+      {/* Placeholder */}
     </div>
   );
 }
