@@ -78,18 +78,17 @@
   height: 60rem;
   background-color: black;
   position: relative;
-  .test {
-    color: white;
-  }
   .events__title {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.15);
     font-size: 25rem;
     text-transform: uppercase;
     font-weight: 500;
-    font-family: Fort Death;
+    font-family: Besta Baru;
     cursor: default;
     position: absolute;
     right: 0;
+    top: 0;
+    z-index: 0;
   }
 }
 
