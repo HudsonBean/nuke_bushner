@@ -3,6 +3,8 @@ import MenuBar from "../Components/MenuBar";
 import Slant from "../Components/Slant";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
+import Carousel from "../Components/Carousel";
+import classNames from "classnames";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -37,11 +39,14 @@ function Home() {
             transform: `translate(${-eventsTitleX}px, 0px)`,
             opacity: eventsTitleOpacity,
           }}
-          className="events__title"
+          className={classNames("events__title", "no-select")}
         >
           Events
         </span>
         {/* Events carousel */}
+        <div className="events__carousel">
+          <Carousel />
+        </div>
       </div>
     </div>
   );

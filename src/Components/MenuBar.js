@@ -15,24 +15,25 @@ function MenuBar() {
         </Button>
 
         {/* About Me */}
-        <Button className="menu-bar__item">
+        <Button newPage={true} className="menu-bar__item" href="/about-me">
           <span>About Me</span>
         </Button>
 
         {/* Name */}
         <Button
           className={classNames("menu-bar__item", "menu-bar__item--name")}
+          href="/"
         >
           <span>Nuke Bushner</span>
         </Button>
 
         {/* Watch */}
-        <Button className="menu-bar__item">
+        <Button className="menu-bar__item" href="/watch">
           <span>Watch</span>
         </Button>
 
         {/* Shop */}
-        <Button className="menu-bar__item">
+        <Button className="menu-bar__item" href="/shop">
           <span>Shop</span>
         </Button>
       </div>
