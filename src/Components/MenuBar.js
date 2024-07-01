@@ -10,12 +10,12 @@ function MenuBar() {
     <div className="menu-bar">
       <div className="menu-bar--wrapper">
         {/* Events */}
-        <Button className="menu-bar__item">
+        <Button className="menu-bar__item" href="#events">
           <span>Events</span>
         </Button>
 
         {/* About Me */}
-        <Button className="menu-bar__item" href="#about-me">
+        <Button className="menu-bar__item">
           <span>About Me</span>
         </Button>
 

@@ -7,11 +7,16 @@
   src: url(./Fonts/FortDeath-3ne6.ttf);
 }
 
+@font-face {
+  font-family: Josy Wine;
+  src: url(./Fonts/JosyWine-G33rg.ttf);
+}
+
 .home-page {
   width: 100%;
-  height: 50rem;
+  height: 42.5rem;
   position: relative;
-  background-image: url(../images/Image3.png);
+  background-image: url(../Images/Image3.png);
   background-size: cover;
   background-color: rgba(30, 30, 30, 0.45);
   background-blend-mode: multiply;
@@ -68,10 +73,24 @@
   }
 }
 
-#about-me {
+#events {
   width: 100%;
   height: 60rem;
   background-color: black;
+  position: relative;
+  .test {
+    color: white;
+  }
+  .events__title {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 25rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: Fort Death;
+    cursor: default;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .grit {
@@ -79,5 +98,5 @@
   height: 50rem;
   background-color: rgba(150, 150, 150, 0.15);
   position: absolute;
-  mask-image: url(../images/grit.png);
+  mask-image: url(../Images/grit.png);
 }

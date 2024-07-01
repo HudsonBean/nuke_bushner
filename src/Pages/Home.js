@@ -1,43 +1,45 @@
-import React from "react";
 import "../Styles/Home.css";
 import MenuBar from "../Components/MenuBar";
 import Slant from "../Components/Slant";
-import video from "../Videos/WriteThatSong.mp4";
-import Button from "../Components/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useState } from "react";
 
 function Home() {
+  const { scrollY } = useScroll();
+  const [eventsTitleX, setEventsTitleX] = useState(0);
+  const [eventsTitleOpacity, setEventsTitleOpacity] = useState(0);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log(latest);
+    if (latest >= 65) {
+      if (latest >= 550) {
+        return;
+      } else {
+        setEventsTitleX(latest - 65);
+        setEventsTitleOpacity((latest - 65) / 100);
+      }
+    } else {
+      setEventsTitleX(0);
+      setEventsTitleOpacity(0);
+    }
+  });
   return (
     <div>
       <div className="home-page">
         <MenuBar />
-        <div className="home-page__content">
-          {/* Video */}
-          <video
-            autoPlay
-            className="home-page__video"
-            controls
-            muted
-            controlsList="play nodownload nofullscreen noremoteplayback"
-          >
-            <source src={video} type="video/mp4" />
-          </video>
-          {/* CTA */}
-          <Button className="home-page__cta">
-            <span>Book Now</span>
-            <FontAwesomeIcon
-              className="home-page__cta--arrow"
-              icon={faArrowDown}
-            />
-          </Button>
-        </div>
+        <div className="home-page__content"></div>
         <Slant className="slant" />
       </div>
-      {/* About Me */}
-      <div id="about-me">
-        <span className="about-me__first-name">Nuke</span>
-        <span className="about-me__last-name">Bushner</span>
+      {/* Events */}
+      <div id="events">
+        <span
+          style={{
+            transform: `translate(${-eventsTitleX}px, 0px)`,
+            opacity: eventsTitleOpacity,
+          }}
+          className="events__title"
+        >
+          Events
+        </span>
       </div>
     </div>
   );
