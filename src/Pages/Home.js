@@ -7,7 +7,7 @@ import { useState } from "react";
 function Home() {
   const { scrollY } = useScroll();
   const [eventsTitleX, setEventsTitleX] = useState(0);
-  const [eventsTitleOpacity, setEventsTitleOpacity] = useState(0);
+  const [eventsTitleOpacity, setEventsTitleOpacity] = useState(0.25);
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log(latest);
     if (latest >= 65) {
@@ -19,7 +19,7 @@ function Home() {
       }
     } else {
       setEventsTitleX(0);
-      setEventsTitleOpacity(0);
+      setEventsTitleOpacity(0.25);
     }
   });
   return (
