@@ -63,13 +63,13 @@
   height: 2rem;
 }
 .home-page .slant {
-  fill: white;
+  fill: black;
 }
 
 #about-me {
   width: 100%;
   height: 60rem;
-  background-color: white;
+  background-color: black;
 }
 
 .grit {

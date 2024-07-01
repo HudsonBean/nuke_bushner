@@ -24,11 +24,7 @@ function Home() {
             <source src={video} type="video/mp4" />
           </video>
           {/* CTA */}
-          <Button
-            className="home-page__cta"
-            onClick={() => console.log("Hello!")}
-            onHover={() => {}}
-          >
+          <Button className="home-page__cta">
             <span>Book Now</span>
             <FontAwesomeIcon
               className="home-page__cta--arrow"
@@ -39,8 +35,10 @@ function Home() {
         <Slant className="slant" />
       </div>
       {/* About Me */}
-      <div id="about-me"></div>
-      {/* Placeholder */}
+      <div id="about-me">
+        <span className="about-me__first-name">Nuke</span>
+        <span className="about-me__last-name">Bushner</span>
+      </div>
     </div>
   );
 }
