@@ -103,3 +103,15 @@
     }
   }
 }
+
+.viewable--false {
+  opacity: 0;
+  transition: all 0.65s ease-in-out;
+  transform: translateX(-20px);
+}
+
+.viewable--true {
+  opacity: 1;
+  transition: all 0.65s ease-in-out;
+  transform: translateX(0px);
+}
