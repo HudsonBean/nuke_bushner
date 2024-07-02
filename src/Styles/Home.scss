@@ -110,7 +110,7 @@
   transform: translateX(-20px);
 
   width: 100%;
-  height: 20rem;
+  height: 10rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -132,14 +132,7 @@
     font-size: 3rem;
     border: solid white 2.5px;
     position: relative;
-
-    .book-now__cta--arrow {
-      position: absolute;
-      bottom: -3rem;
-      opacity: 0;
-      transition: all 0.25s ease-in-out;
-    }
-    &:hover:not(:has(.book-now__cta--arrow:hover)) {
+    &:hover {
       background-color: black;
       color: white;
       .book-now__cta--arrow {

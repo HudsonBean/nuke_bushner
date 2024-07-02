@@ -17,11 +17,7 @@ function BookNow() {
   });
   return (
     <div className={classNames("book-now", { viewable: isViewable })}>
-      <span>See him in person?</span>
-      <Button className="book-now__cta">
-        Book Now
-        <FontAwesomeIcon className="book-now__cta--arrow" icon={faArrowDown} />
-      </Button>
+      <Button className="book-now__cta">Book Now</Button>
     </div>
   );
 }
