@@ -5,26 +5,25 @@ import { useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import Carousel from "../Components/Carousel";
 import classNames from "classnames";
-import Button from "../Components/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import BookNow from "../Components/BookNow";
 
 function Home() {
   const { scrollY } = useScroll();
   // Events Title
   const [eventsTitleX, setEventsTitleX] = useState(0);
-  const [eventsTitleOpacity, setEventsTitleOpacity] = useState(0.25);
+  const opacityDefault = 0.45;
+  const [eventsTitleOpacity, setEventsTitleOpacity] = useState(opacityDefault);
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest >= 65) {
       if (latest >= 500) {
-        return;
+        setEventsTitleX(440);
       } else {
         setEventsTitleX(latest - 65);
-        setEventsTitleOpacity((latest - 65) / 100);
+        setEventsTitleOpacity((latest - 65) / 100 + opacityDefault);
       }
     } else {
       setEventsTitleX(0);
-      setEventsTitleOpacity(0);
+      setEventsTitleOpacity(opacityDefault);
     }
   });
 
@@ -52,17 +51,9 @@ function Home() {
         </div>
       </div>
       {/* Book now section */}
-      <div className="book-now">
-        <span>See him in person?</span>
-        <Button className="book-now__cta">
-          Book Now
-          <FontAwesomeIcon
-            className="book-now__cta--arrow"
-            icon={faArrowDown}
-          />
-        </Button>
-      </div>
+      <BookNow />
       {/* Merch preview section */}
+      <div className="merch-preview"></div>
     </div>
   );
 }

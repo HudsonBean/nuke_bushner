@@ -104,7 +104,13 @@
 }
 
 .book-now {
+  // Viewable-false
+  opacity: 0;
+  transition: all 0.65s ease-in-out;
+  transform: translateX(-20px);
+
   width: 100%;
+  height: 20rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -133,7 +139,7 @@
       opacity: 0;
       transition: all 0.25s ease-in-out;
     }
-    &:hover {
+    &:hover:not(:has(.book-now__cta--arrow:hover)) {
       background-color: black;
       color: white;
       .book-now__cta--arrow {
@@ -142,6 +148,12 @@
       }
     }
   }
+}
+
+.merch-preview {
+  width: 100%;
+  height: 35rem;
+  background-color: #eed8a4;
 }
 
 .grit {
@@ -159,4 +171,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.viewable {
+  opacity: 1;
+  transition: all 0.65s ease-in-out;
+  transform: translateX(0px);
 }
