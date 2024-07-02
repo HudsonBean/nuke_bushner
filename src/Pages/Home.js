@@ -1,11 +1,12 @@
 import "../Styles/Home.css";
 import MenuBar from "../Components/MenuBar";
-import Slant from "../Components/Slant";
+import SlantRight from "../Components/SlantRight";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import Carousel from "../Components/Carousel";
 import classNames from "classnames";
 import BookNow from "../Components/BookNow";
+import ShopPreview from "../Components/ShopPreview";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -32,7 +33,7 @@ function Home() {
       <div className="home-page">
         <MenuBar />
         <div className="home-page__content"></div>
-        <Slant className="slant" />
+        <SlantRight right={true} className="slant" />
       </div>
       {/* Events */}
       <div id="events">
@@ -53,7 +54,11 @@ function Home() {
       {/* Book now section */}
       <BookNow />
       {/* Merch preview section */}
-      <div className="merch-preview"></div>
+      <ShopPreview />
+      {/* Listen preview */}
+      <div
+        style={{ width: "100%", height: "80rem", backgroundColor: "black" }}
+      ></div>
     </div>
   );
 }

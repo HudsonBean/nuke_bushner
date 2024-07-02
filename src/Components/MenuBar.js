@@ -28,12 +28,12 @@ function MenuBar() {
         </Button>
 
         {/* Watch */}
-        <Button className="menu-bar__item" href="/watch">
-          <span>Watch</span>
+        <Button className="menu-bar__item" href="/listen">
+          <span>Listen</span>
         </Button>
 
         {/* Shop */}
-        <Button className="menu-bar__item" href="/shop">
+        <Button className="menu-bar__item" href="#shop-preview">
           <span>Shop</span>
         </Button>
       </div>
