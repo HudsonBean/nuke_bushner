@@ -75,7 +75,7 @@
   justify-content: right;
   align-items: center;
   width: 100%;
-  height: 60rem;
+  height: 50rem;
   background-color: black;
   position: relative;
 }
@@ -97,6 +97,47 @@
   align-items: center;
   width: 65%;
   overflow: hidden;
+  margin-top: 10rem;
+}
+
+.book-now {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+.book-now span {
+  font-family: Besta Baru;
+  color: white;
+  font-size: 5rem;
+}
+.book-now .book-now__cta {
+  height: 5rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-family: Fort Death;
+  font-size: 3rem;
+  border: solid white 2.5px;
+  position: relative;
+}
+.book-now .book-now__cta .book-now__cta--arrow {
+  position: absolute;
+  bottom: -3rem;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+.book-now .book-now__cta:hover {
+  background-color: black;
+  color: white;
+}
+.book-now .book-now__cta:hover .book-now__cta--arrow {
+  bottom: -4rem;
+  opacity: 1;
 }
 
 .grit {

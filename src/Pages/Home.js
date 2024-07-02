@@ -5,6 +5,9 @@ import { useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import Carousel from "../Components/Carousel";
 import classNames from "classnames";
+import Button from "../Components/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -48,6 +51,18 @@ function Home() {
           <Carousel />
         </div>
       </div>
+      {/* Book now section */}
+      <div className="book-now">
+        <span>See him in person?</span>
+        <Button className="book-now__cta">
+          Book Now
+          <FontAwesomeIcon
+            className="book-now__cta--arrow"
+            icon={faArrowDown}
+          />
+        </Button>
+      </div>
+      {/* Merch preview section */}
     </div>
   );
 }

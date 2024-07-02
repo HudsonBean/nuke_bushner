@@ -17,11 +17,9 @@
 }
 .carousel-container::-webkit-scrollbar-track {
   background: none;
-  border-radius: 10px;
 }
 .carousel-container::-webkit-scrollbar-thumb {
   background-color: #eed8a4;
-  border-radius: 10px;
   &:hover {
     background-color: white;
   }
@@ -90,7 +88,6 @@
     font-size: 3rem;
     background-color: black;
     padding: 5px;
-    border-radius: 5px;
     text-transform: uppercase;
     font-weight: 500;
   }
