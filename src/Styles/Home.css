@@ -128,6 +128,7 @@
   font-size: 3rem;
   border: solid white 2.5px;
   position: relative;
+  border-radius: 10px;
 }
 .book-now .book-now__cta:hover {
   background-color: black;

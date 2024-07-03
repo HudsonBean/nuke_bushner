@@ -50,7 +50,7 @@ function ShopPreview() {
           style={isViewable}
         />
         <Button newPage={true} href="/store" className="shop-preview__button">
-          Shop
+          Buy
         </Button>
       </div>
       <SlantLeft right={false} className="slant" />
