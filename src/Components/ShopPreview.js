@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import SlantLeft from "./SlantLeft";
 import shirt from "../Images/ShirtPlaceholder.png";
 import Button from "./Button";
+import classNames from "classnames";
 
 function ShopPreview() {
   const { scrollY } = useScroll();
   const [shopTitleX, setShopTitleX] = useState(0);
   const [isViewable, setViewable] = useState({
-    opacity: "1",
-    transform: "translateX(0px)",
+    opacity: "0",
+    transform: "translateX(-20px)",
   });
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest >= 1000) {
@@ -35,7 +36,7 @@ function ShopPreview() {
         style={{
           transform: `translate(${shopTitleX}px, 0px)`,
         }}
-        className="shop-preview__title"
+        className={classNames("shop-preview__title", "no-select")}
       >
         Shop
       </span>
@@ -43,7 +44,8 @@ function ShopPreview() {
         <img
           alt="Shirts from Nuke Bushner's store."
           src={shirt}
-          className="shop-preview__image"
+          draggable={false}
+          className={classNames("shop-preview__image", "no-select")}
           style={{ ...isViewable, transition: "all 0.65s ease-in-out" }}
         />
         <Button
