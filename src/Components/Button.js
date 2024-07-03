@@ -8,6 +8,7 @@ function Button({
   onClick,
   onHover,
   newPage = false,
+  style,
 }) {
   if (newPage) {
     return (
@@ -15,7 +16,7 @@ function Button({
         to={href}
         onHover={onHover}
         onClick={onClick}
-        style={{ cursor: "pointer", textDecoration: "none" }}
+        style={{ ...style, cursor: "pointer", textDecoration: "none" }}
         className={className}
       >
         {children}
@@ -27,7 +28,7 @@ function Button({
         href={href}
         onHover={onHover}
         onClick={onClick}
-        style={{ cursor: "pointer", textDecoration: "none" }}
+        style={{ ...style, cursor: "pointer", textDecoration: "none" }}
         className={className}
       >
         {children}

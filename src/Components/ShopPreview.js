@@ -9,11 +9,10 @@ function ShopPreview() {
   const [shopTitleX, setShopTitleX] = useState(0);
   const [isViewable, setViewable] = useState({
     opacity: "1",
-    transition: "all 0.65s ease-in-out",
     transform: "translateX(0px)",
   });
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest >= 960) {
+    if (latest >= 1000) {
       setShopTitleX(latest - 960);
     } else {
       setShopTitleX(0);
@@ -21,13 +20,11 @@ function ShopPreview() {
     if (latest >= 1150) {
       setViewable({
         opacity: "1",
-        transition: "all 0.65s ease-in-out",
         transform: "translateX(0px)",
       });
     } else {
       setViewable({
         opacity: "0",
-        transition: "all 0.65s ease-in-out",
         transform: "translateX(-20px)",
       });
     }
@@ -47,9 +44,19 @@ function ShopPreview() {
           alt="Shirts from Nuke Bushner's store."
           src={shirt}
           className="shop-preview__image"
-          style={isViewable}
+          style={{ ...isViewable, transition: "all 0.65s ease-in-out" }}
         />
-        <Button newPage={true} href="/store" className="shop-preview__button">
+        <Button
+          style={{
+            ...isViewable,
+            transitionProperty: "opacity, transform",
+            transitionDuration: "0.65s",
+            transitionTimingFunction: "ease-in-out",
+          }}
+          newPage={true}
+          href="/store"
+          className="shop-preview__button"
+        >
           Buy
         </Button>
       </div>
