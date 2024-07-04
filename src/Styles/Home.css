@@ -45,26 +45,7 @@
   background-color: white;
   position: relative;
   border: white 2.5px solid;
-}
-.home-page .home-page__content .home-page__cta .home-page__cta--arrow {
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-}
-.home-page .home-page__content .home-page__cta:hover {
-  background-color: black;
   transition: all 0.25s ease-in-out;
-}
-.home-page .home-page__content .home-page__cta:hover span {
-  color: white;
-  transition: all 0.25s ease-in-out;
-}
-.home-page .home-page__content .home-page__cta:hover .home-page__cta--arrow {
-  color: white;
-  transform: translateY(40px);
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-  height: 2rem;
 }
 .home-page .slant {
   fill: black;
@@ -140,6 +121,7 @@
 }
 
 #shop-preview {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -188,6 +170,73 @@
 #shop-preview .shop-preview__content-wrapper .shop-preview__button:hover {
   background-color: #eed8a4;
   color: black;
+}
+
+#listen-preview {
+  width: 100%;
+  height: 60rem;
+  background-color: black;
+}
+#listen-preview .listen-preview__content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#listen-preview .listen-preview__content-wrapper .listen-preview__title {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Besta Baru;
+  cursor: default;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#listen-preview .listen-preview__content-wrapper .wrapper {
+  z-index: 150;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+#listen-preview .listen-preview__content-wrapper .wrapper .listen-preview__album-covers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+#listen-preview .listen-preview__content-wrapper .wrapper .listen-preview__album-covers img {
+  display: block;
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+}
+#listen-preview .listen-preview__content-wrapper .wrapper .listen-preview__cta {
+  height: 5rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-family: Fort Death;
+  font-size: 3rem;
+  border: solid white 2.5px;
+  position: relative;
+  border-radius: 10px;
+}
+#listen-preview .listen-preview__content-wrapper .wrapper .listen-preview__cta:hover {
+  background-color: black;
+  color: white;
 }
 
 .grit {

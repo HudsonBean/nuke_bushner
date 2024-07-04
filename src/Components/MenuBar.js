@@ -28,7 +28,7 @@ function MenuBar() {
         </Button>
 
         {/* Watch */}
-        <Button className="menu-bar__item" href="/listen">
+        <Button className="menu-bar__item" href="#listen-preview">
           <span>Listen</span>
         </Button>
 

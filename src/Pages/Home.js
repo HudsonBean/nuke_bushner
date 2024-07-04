@@ -7,6 +7,7 @@ import Carousel from "../Components/Carousel";
 import classNames from "classnames";
 import BookNow from "../Components/BookNow";
 import ShopPreview from "../Components/ShopPreview";
+import ListenPreview from "../Components/ListenPreview";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -56,9 +57,10 @@ function Home() {
       {/* Merch preview section */}
       <ShopPreview />
       {/* Listen preview */}
-      <div
-        style={{ width: "100%", height: "80rem", backgroundColor: "black" }}
-      ></div>
+      <div id="listen-preview">
+        <ListenPreview />
+      </div>
+      {/* Footer */}
     </div>
   );
 }
